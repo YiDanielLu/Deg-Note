@@ -30,6 +30,7 @@ In brief:
  -  Open your terminal window 
  -  Activate your `conda` environment by typing `conda activate deg`.
  -  Type   `deepethogram` or `python -m deepethogram` in the command line to open the GUI. 
+ 
 ![enter image description here](https://user-images.githubusercontent.com/81632945/120920668-84f58400-c6f2-11eb-882d-ad60505fbf05.png)
 
 Go to  `file -> new project`. Select a location for the new project to be created. 
