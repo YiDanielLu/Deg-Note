@@ -136,7 +136,7 @@ In the flow generator box, click `train`
 ![enter image description here](https://user-images.githubusercontent.com/81632945/120924933-bda05800-c708-11eb-917a-d34b49db9f90.png)
 
 **Equivalent command line arguments:**
-To train the flow generator with the larger MotionNet architecture and a batch size of 16 (*you can change the batch size in project_config.yaml, too large batch size might results in errors*):
+To train the flow generator with the larger MotionNet architecture and a batch size of 16 (*you can change the batch size in project_config.yaml, too large batch size might result in errors*):
 
     `python -m deepethogram.flow_generator.train project.config_file=path/to/project_config.yaml flow_generator.arch=MotionNet compute.batch_size=16`
 **Execution results:**
