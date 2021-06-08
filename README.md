@@ -70,7 +70,7 @@ A directory will be created in the location you specified, with the name  `proje
 
 ## Add videos
 
-When you add videos to DeepEthogram, we will  **copy them to the deepethogram project directory**  (not move or use a symlink). We highly recommend starting with at least 3 videos, so you have more than 1 to train, and 1 for validation (roughly, videos are assigned to splits probabilistically, it's better to start with >10 decently sized videos). When you add videos, DeepEthogram will automatically compute mean and standard deviation statistics and save them to disk. This might take a few moments (or minutes for very long videos). 
+When you add videos to DeepEthogram, we will  **copy them to the deepethogram project directory**  (*not move or use a symlink*). We highly recommend starting with at least 3 videos, so you have more than 1 to train, and 1 for validation (*roughly, videos are assigned to splits probabilistically, it's better to start with >10 decently sized videos*). When you add videos, DeepEthogram will automatically compute mean and standard deviation statistics and save them to disk. This might take a few moments (or minutes for very long videos). 
 
 ![enter image description here](https://user-images.githubusercontent.com/81632945/120922843-0272c180-c6fe-11eb-9a80-4829ffd969eb.png)
 
