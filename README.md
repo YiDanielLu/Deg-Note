@@ -101,9 +101,9 @@ When you add videos to DeepEthogram, we will  **copy them to the deepethogram pr
       1%|█▋                                                                                                                                              | 70/5930 [00:32<48:48,  2.00it/s]
 ## Label a few videos
 
- -  **Label buttons**: These buttons are the ordered list of behaviors for your project. Each button corresponds to a row in the label viewer (**9ii**). Pushing this button will toggle the behavior. Background is a special class: it is mutually exclusive with the other behaviors. Pushing the keyboard number keys denoted in brackets will also toggle the behavior. 
- - **Label viewer**: This is where you can view your manual labels. The current video frame is denoted with the current frame indicator (**13**). Unlabeled frames will be partially transparent, with the "background" class pre-selected. Labeled frames will be opaque (see image). 
- - **Finalize labels**: When labeling a video, particularly with rare behaviors, the vast majority of frames will be "background". We want to be able to tell the difference between  _this frame is background_  and  _I have not looked at or labeled this frame yet_, so that you can partially label a video and then return to it. By default, when saving the project (**menu bar/file/save**), unlabeled frames are set to  `-1`  and the video is not used for training. When you've fully labeled a video, instead of affirmatively going through every frame and labeling them as  _background_, we will use this button. When you press this button, all unlabeled frames will be set to background, and the video will be considered fully labeled. This video will be used by DeepEthogram for training (**5i, 6i**)
+ -  **Label buttons**: These buttons are the ordered list of behaviors for your project. Each button corresponds to a row in the label viewer. Pushing this button will toggle the behavior. Background is a special class: it is mutually exclusive with the other behaviors. Pushing the keyboard number keys denoted in brackets will also toggle the behavior. 
+ - **Label viewer**: This is where you can view your manual labels. The current video frame is denoted with the current frame indicator. Unlabeled frames will be partially transparent, with the "background" class pre-selected. Labeled frames will be opaque (see image). 
+ - **Finalize labels**: When labeling a video, particularly with rare behaviors, the vast majority of frames will be "background". We want to be able to tell the difference between  _this frame is background_  and  _I have not looked at or labeled this frame yet_, so that you can partially label a video and then return to it. By default, when saving the project (**menu bar/file/save**), unlabeled frames are set to  `-1`  and the video is not used for training. When you've fully labeled a video, instead of affirmatively going through every frame and labeling them as  _background_, we will use this button. When you press this button, all unlabeled frames will be set to background, and the video will be considered fully labeled. This video will be used by DeepEthogram for training.
 
 For more information, see [using the GUI docs](https://github.com/jbohnslav/deepethogram/blob/master/docs/using_gui.md).
 
@@ -131,7 +131,7 @@ The flow generator is the model that computes frame-to-frame motion; the feature
 ## Train Flow Generator
 In the flow generator box, click `train`
 
- - **Train button**: Train the flow generator. It will use hyperparameters from your project configuration file (or defaults specified in  `deepethogram/conf`). See  [using configuration files for details](https://github.com/jbohnslav/deepethogram/blob/master/docs/using_config_files.md). This includes the model architecture (TinyMotionNet, MotionNet, TinyMotionNet3D). The weights to pre-load will be specified by the model selector (**4ii**)
+ - **Train button**: Train the flow generator. It will use hyperparameters from your project configuration file (or defaults specified in  `deepethogram/conf`). See  [using configuration files for details](https://github.com/jbohnslav/deepethogram/blob/master/docs/using_config_files.md). This includes the model architecture (TinyMotionNet, MotionNet, TinyMotionNet3D). The weights to pre-load will be specified by the model selector.
  - **Model selector**: Choose the weights to pre-load. The default model might be TinyMotionNet.
 ![enter image description here](https://user-images.githubusercontent.com/81632945/120924933-bda05800-c708-11eb-917a-d34b49db9f90.png)
 
@@ -327,7 +327,7 @@ To train the flow generator with the larger MotionNet architecture and a batch s
 In the feature extractor box, click `train`. After feature extractor training is over, click `infer`
 
  - **Train button**: Train the feature extractor. It will use hyperparameters from your project configuration file. This will take a long time, perhaps overnight. To speed training potentially at the cost of model performance, set  `feature_extractor/curriculum = false`  in your project configuration file.
--  **Model selector**: A list of models in your  [models directory](https://github.com/jbohnslav/deepethogram/blob/master/docs/file_structure.md). These are the weights that will be loaded and fine-tuned when you train (**5i**) and used to run inference (**5ii**). The default model might be ResNet18 (hidden_two_stream_kinetics_degf)
+-  **Model selector**: A list of models in your  [models directory](https://github.com/jbohnslav/deepethogram/blob/master/docs/file_structure.md). These are the weights that will be loaded and fine-tuned when you train and used to run inference. The default model might be ResNet18 (hidden_two_stream_kinetics_degf)
 ![enter image description here](https://user-images.githubusercontent.com/81632945/120924929-b9743a80-c708-11eb-8b5c-bde9170c32a8.png)
 **Equivalent command line arguments:**
 To train the feature extractor with the ResNet18 base, without the curriculum training, with an initial learning rate of 1e-5:    
@@ -993,7 +993,7 @@ In the sequence box, click `train`, After sequence model training is over, click
     Epoch 19: 100%|████████████████████████████████████████████████████████████████████████████| 241/241 [00:29<00:00,  8.12it/s, loss=1.32e+03, v_num=0]
 
 ## Run inference 
-- **Inference button**: Run inference with your sequence model. Clicking this button will load a list of videos in your project that already have some features extracted. Output files that do not have any predictions from the currently selected (**6iii**) sequence architecture will be automatically pre-selected. If you don't see a video here, you need to run inference with your feature extractor first (**5ii**). This runs extremely fast, and should only take a few seconds for any number of videos.
+- **Inference button**: Run inference with your sequence model. Clicking this button will load a list of videos in your project that already have some features extracted. Output files that do not have any predictions from the currently selected sequence architecture will be automatically pre-selected. If you don't see a video here, you need to run inference with your feature extractor first. This runs extremely fast, and should only take a few seconds for any number of videos.
 ![enter image description here](https://user-images.githubusercontent.com/81632945/120924926-b6794a00-c708-11eb-84f1-24d510fd3f4b.png)
 
 
