@@ -5,7 +5,7 @@ DeepEthogram is an open-source pipeline based on supervised machine learning for
 ![enter image description here](https://user-images.githubusercontent.com/81632945/120920670-8757de00-c6f2-11eb-8c7e-76ef3ab5c365.jpg)
 
  - Written by Yi (Daniel) Lu 
- -  luyi2018@zju.edu.cn
+ -  Yi_Lu@hms.harvard.edu
 
 # Instructions for getting started
 ## Installation
