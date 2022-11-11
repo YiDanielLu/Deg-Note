@@ -1221,7 +1221,7 @@ Now that you have even more videos and labels, we want to incorporate these into
 If this works OK for your project, the next steps should be to get a workstation with a good GPU locally (*workstation is a user-friendly desktop system for laptop and PCs which allows GUI operation*). According to Jim, purchasing a proper GPU really depends on the budget. it would be great to get an Nvidia 30-series card, such as a 3070, 3080 or 3090 . However, Nvidia 2080 or 2080 Tis would work well too.
 
 ## Acknowledgements
-We thank [Harvey lab](https://harveylab.hms.harvard.edu/) members James P.  Bohnslav for sharing us with COLAB notebook on how to upload the data and train models. If you have any issues, or can't get Deepethogram running, or just have questions, please raise an issue on Github.[https://github.com/jbohnslav/deepethogram/issues](https://github.com/jbohnslav/deepethogram/issues)
+We thank Harvey lab members James P.  Bohnslav for sharing us with COLAB notebook on how to upload the data and train models. If you have any issues, or can't get Deepethogram running, or just have questions, please raise an issue on Github.[https://github.com/jbohnslav/deepethogram/issues](https://github.com/jbohnslav/deepethogram/issues)
 
 
 
